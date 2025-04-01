@@ -1,0 +1,87 @@
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 400px; /* Altura fixa */
+  }
+  
+  .sliderContent {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .slide a {
+    display: block;
+    height: 100%;
+  }
+  
+  .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .setaEsquerda, .setaDireita {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+  }
+  
+  .setaEsquerda:hover, .setaDireita:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .setaEsquerda { 
+    left: 20px; 
+  }
+  
+  .setaDireita { 
+    right: 20px; 
+  }
+  
+  .paginacao {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .paginacao span {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .paginacao span:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .paginacao .ativo {
+    background: white;
+    transform: scale(1.2);
+  }
